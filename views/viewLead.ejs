@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+	<form>
+		<div class="form-group">
+			<label>Name:</label>
+		<input class="form-control" type="text" value="<%= lead.name %>" readonly>
+		</div>
+		<div class="form-group">
+			<label>Email:</label>
+		<input class="form-control" type="email" value="<%= lead.email %>" readonly>
+		</div>
+		<div class="form-group">
+			<label>Mobile:</label>
+		<input class="form-control" type="text" value="<%= lead.mobile %>" readonly>
+		</div>
+		<div class="form-group">
+			<label>Address:</label>
+		<textarea class="form-control" rows="5" cols="50" readonly=""><%= lead.address %></textarea>
+		</div>
+		<div class="form-group">
+			<label>Area:</label>
+		<input class="form-control" type="text" value="<%= lead.area %>" readonly>
+		</div>
+	</form>
+	
+<% include ./partials/footer %>

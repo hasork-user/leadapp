@@ -1,0 +1,34 @@
+<% include ./partials/header %>
+	<h1>Leads</h1>
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">Name</th>
+				<th scope="col">Mobile</th>
+				<th scope="col">Email</th>
+				<th scope="col">Address</th>
+				<th scope="col">Area</th>
+				<th scope="col">Action</th>
+			</tr>
+		</thead>
+	
+	<% leads.forEach(function(lead){ %>
+		<tr>
+			<td><%= lead.name %></td>
+			<td><%= lead.mobile %></td>
+			<td><%= lead.email %></td>
+			<td><%= lead.address %></td>
+			<td><%= lead.area %></td>
+			<td>
+			<form method="GET" action="/viewLead/<%= lead._id %>">
+				<button class="btn btn-primary">View</button>
+			</form>
+			<form method="POST" action="/deleteLead/<%= lead._id %>?_method=DELETE">
+				<td><button class="btn btn-danger">Delete</button></td>
+			</form>
+		</td>
+		</tr>
+<% }); %>
+
+</table>
+<% include ./partials/footer %>

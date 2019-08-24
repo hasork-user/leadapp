@@ -1,0 +1,26 @@
+<% include ./partials/header %>
+	<h2>Lead Information</h2>
+	<form method="POST" action="/createLead">
+		<div class="form-group">
+			<label>Name</label>
+		<input class="form-control" type="text" name="lead[name]">
+		</div>
+		<div class="form-group">
+			<label>Mobile</label>
+		<input class="form-control" type="text" name="lead[mobile]">
+		</div>
+		<div class="form-group">
+			<label>Email</label>
+		<input class="form-control" type="email" name="lead[email]">
+		</div>
+		<div class="form-group">
+			<label>Address</label>
+		<textarea class="form-control" rows="5" cols="50" name="lead[address]"></textarea>
+		</div>
+		<div class="form-group">
+			<label>Area</label>
+		<input class="form-control" type="text" name="lead[area]">
+		</div>
+		<button class="btn btn-primary">Create</button>
+	</form>
+<% include ./partials/footer %>
